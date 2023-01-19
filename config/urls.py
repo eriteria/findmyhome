@@ -18,6 +18,7 @@ urlpatterns = [
     path("users/", include("findmyhome.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    path("main/", include("findmyhome.main.urls", namespace="main")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
